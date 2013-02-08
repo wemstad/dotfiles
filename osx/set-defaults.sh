@@ -23,12 +23,20 @@ chflags nohidden ~/Library
 defaults write NSGlobalDomain KeyRepeat -int 0
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+defaults write com.apple.Finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.Finder ShowRemovableMediaOnDesktop -bool true
 
 # Run the screensaver if we're in the bottom-left hot corner.
-defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 0
+defaults write com.apple.Dock wvous-bl-corner -int 5
+defaults write com.apple.Dock wvous-bl-modifier -int 0
+
+# Remove latancy for Dock to popup, also removes dubble dragdown to show 
+# Dock in fullscreen
+defaults write com.apple.Dock autohide-delay -float 0
+defaults write com.apple.dock autohide-fullscreen-delayed false
+
+# Dim hidden apps in Dock
+defaults write com.apple.Dock showhidden false
 
 # Hide Safari's bookmark bar.
 defaults write com.apple.Safari ShowFavoritesBar -bool false
