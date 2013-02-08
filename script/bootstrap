@@ -112,6 +112,8 @@ install_dotfiles () {
     fi
 
   done
+
+  source ~/.zshrc
 }
 
 setup_gitconfig
