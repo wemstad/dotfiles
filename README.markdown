@@ -1,4 +1,5 @@
-# holman does dotfiles
+# wemstad does dotfiles
+Copy from holman with some changes to fit my workflow
 
 ## dotfiles
 
