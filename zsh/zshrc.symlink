@@ -40,7 +40,6 @@ done
 # Load rvm using boxen
 # source ~/.rvm/scripts/rvm
 
-# Load boxen
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
 
 unset config_files
