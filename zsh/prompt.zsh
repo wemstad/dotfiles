@@ -57,7 +57,12 @@ rb_prompt(){
 }
 
 directory_name(){
-  echo "%{$fg_bold[yellow]%}%1/%\/%{$reset_color%}"
+  if [[ $(pwd) == "/" ]]
+  then
+    echo "%{$fg_bold[blue]%}%1/%{$reset_color%}"
+  else
+    echo "%{$fg_bold[blue]%}%1/%{$reset_color%}/%"
+  fi
 }
 
 export PROMPT=$'\n$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
