@@ -16,6 +16,8 @@
         count   = !git shortlog -sn
         st = status
         tag = tag -a
+        lg = log --oneline --decorate --all --decorate --graph
+        commit = commit -v
 [color]
         diff = auto
         status = auto
