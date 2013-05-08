@@ -1,2 +1,3 @@
-set number
-set hlsearch 
+set number "Setting rownumbers
+set hlsearch "Setting highlighting on search 
+set autoindent "Allowing autoindent in methods
