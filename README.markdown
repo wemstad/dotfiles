@@ -51,6 +51,10 @@ above and see what components may mesh up with you.
 [Fork it](https://github.com/holman/dotfiles/fork), remove what you don't
 use, and build on what you do use.
 
+## TODO
+
+- Make a vim script file for adding mark V -> .vimrc.
+
 ## components
 
 There's a few special files in the hierarchy.
