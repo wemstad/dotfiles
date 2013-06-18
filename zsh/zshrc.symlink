@@ -37,10 +37,9 @@ do
   source $file
 done
 
-# Load rvm using boxen
-# source ~/.rvm/scripts/rvm
 
 
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 # AutoJump
 if [[ -n $commands[brew] ]] && [ $commands[brew] -a -f `brew --prefix`/etc/autojump ];
 then
