@@ -1,3 +1,24 @@
+set nocompatible               " Be iMproved
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+"PLUGINS
+NeoBundle 'scrooloose/nerdcommenter'
+
+"END PLUGINS
+
+" Wrap gitcommit file types at the appropriate length
+filetype indent plugin on
+
+NeoBundleCheck
+
 syntax on
 set ruler
 set number "Setting rownumbers
@@ -7,6 +28,7 @@ set smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set wildmenu "Show all in list menu
 
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
+
+let mapleader = ","

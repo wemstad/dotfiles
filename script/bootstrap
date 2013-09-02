@@ -119,6 +119,12 @@ install_dotfiles () {
 
   done
 
+  if [ ! -d "$HOME/.vim/bundle/neobundle.vim" ]
+  then
+    mkdir ~/.vim/bundle  
+    git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+  fi
+
   source ~/.zshrc
 }
 
