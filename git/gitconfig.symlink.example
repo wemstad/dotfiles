@@ -16,6 +16,7 @@
         count   = !git shortlog -sn
         st = status
         tag = tag -a
+        nicelog = log --pretty=format:"%h%x09%an%x09%ad%x09%s" --decorate --all --graph
         lg = log --oneline --decorate --all --decorate --graph
         commit = commit -v
 [color]
