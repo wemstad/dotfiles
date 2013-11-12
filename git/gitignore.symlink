@@ -6,3 +6,4 @@
 .project
 .metadata
 .ssh
+**/.DS_Store
