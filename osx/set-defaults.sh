@@ -149,14 +149,13 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool false
 #  7: Dashboard
 # 10: Put display to sleep
 # 11: Launchpad
-# Run the screensaver if we're in the top-left hot corner.
-# Bottom left screen corner → Turn of screen
-defaults write com.apple.Dock wvous-tl-corner -int 10
-defaults write com.apple.Dock wvous-tl-modifier -int 0
+
 # Top right screen corner → Desktop
 defaults write com.apple.dock wvous-tr-corner -int 4
 defaults write com.apple.dock wvous-tr-modifier -int 0
 
+defaults write com.apple.Dock wvous-tl-corner -int 0
+defaults write com.apple.Dock wvous-tl-modifier -int 0
 defaults write com.apple.Dock wvous-bl-corner -int 0
 defaults write com.apple.Dock wvous-bl-corner -int 0
 defaults write com.apple.Dock wvous-bl-modifier -int 0
