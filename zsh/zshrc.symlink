@@ -39,7 +39,6 @@ done
 
 
 
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 # AutoJump
 if [[ -n $commands[brew] ]] && [ $commands[brew] -a -f `brew --prefix`/etc/autojump ];
 then

@@ -1,7 +1,7 @@
 autoload colors && colors
 # cheers, @ehrenmurdick
 # http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
-
+	
 if (( $+commands[git] ))
 then
   git="$commands[git]"
@@ -41,9 +41,9 @@ unpushed () {
 need_push () {
   if [[ $(unpushed) == "" ]]
   then
-    echo " "
+    echo ""
   else
-    echo " with %{$fg_bold[yellow]%}unpushed%{$reset_color%} "
+    echo " %{$fg_bold[yellow]%}⚠️%{$reset_color%} "
   fi
 }
 
