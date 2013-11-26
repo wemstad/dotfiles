@@ -25,9 +25,6 @@ set number "Setting rownumbers
 set hlsearch "Setting highlighting on search 
 set autoindent "Allowing autoindent in methods
 set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
 set wildmenu "Show all in list menu
 "set title " Change the title bar to show the file that is edited
 "set list " Display unprintable characters (tabs, spaces etc.)
@@ -37,3 +34,8 @@ set splitbelow splitright " Push new splits to bottom/right
 set textwidth=80 " Set text width
 
 let mapleader = ","
+
+autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab
+autocmd Filetype cpp setlocal ts=4 sw=4
