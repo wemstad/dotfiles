@@ -92,8 +92,14 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 # Show the ~/Library folder.
 chflags nohidden ~/Library
 
-# Set a really fast key repeat. 0 fastest, 2 fastest avaiable from sys.pref.
+#Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
+
+#Set a shorter Delay until key repeat
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
+
+#Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.Finder ShowExternalHardDrivesOnDesktop -bool true
