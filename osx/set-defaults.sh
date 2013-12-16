@@ -141,7 +141,10 @@ defaults write com.apple.dock tilesize -int 36
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
-#Forcing mail to show attachments as icons. (inverted)
+# Enable minimize applications to icon 
+defaults write com.apple.dock minimize-to-application -bool true
+
+# Forcing mail to show attachments as icons. (inverted)
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool false
 
 # Hot corners
