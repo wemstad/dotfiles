@@ -222,4 +222,5 @@ defaults write com.apple.DiskUtility advanced-image-options -bool true
 defaults write com.google.Chrome ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 
-
+# Messages.app change cmd+backspace this should clean the row.
+defaults write com.apple.iChat NSUserKeyEquivalents '{"Close Conversation..."="~@W";}'
