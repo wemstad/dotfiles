@@ -1,9 +1,7 @@
 .DS_Store
-.svn
 *~
 *.swp
 *.rbc
 .project
 .metadata
 .ssh
-**/.DS_Store
