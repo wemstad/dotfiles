@@ -11,6 +11,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 "PLUGINS
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'LaTeX-Box-Team/LaTeX-Box'
 
 "END PLUGINS
 
@@ -42,3 +43,7 @@ autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype cpp setlocal ts=4 sw=4
 
 set timeoutlen=1000 ttimeoutlen=50
+
+"Latex-Box
+let g:LatexBox_latexmk_preview_continuously = 1
+let g:LatexBox_viewer = "open"
