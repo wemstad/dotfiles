@@ -1,8 +1,14 @@
 'exception-reporting':
   'userId': '0cf06c57-50fb-4255-446a-605e4501ee06'
 'release-notes':
-  'viewedVersion': '0.85.0'
+  'viewedVersion': '0.89.0'
 'welcome':
   'showOnStartup': false
 'metrics':
   'userId': '8a296a0e28b7955e5307137a8873f0a89995ddea'
+'core':
+  'ignoredNames': [
+    '.git'
+    '.svn'
+    '.DS_Store'
+  ]
