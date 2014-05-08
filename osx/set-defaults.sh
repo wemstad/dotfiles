@@ -26,6 +26,10 @@ defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "2" "HH:mm:ss 
 defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "3" "HH:mm:ss  z"
 defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "4" "HH:mm:ss  zzzz"
 
+#Globals swedish (For login screen)
+sudo defaults write /Library/Preferences/.GlobalPreferences AppleLocale sv_SE
+sudo defaults write /var/root/Library/Preferences/.GlobalPreferences AppleLocale sv_SE
+
 # also set this for the system preference
 defaults write com.apple.systempreferences AppleIntlCustomFormat -dict-add "AppleIntlCustomICUDictionary" "{'AppleICUDateFormatStrings'={'1'='yyyy-MM-dd ';'2'='d MMM, y';'3'='d MMMM, y';'4'='EEEE, d MMMM yyyy';};'AppleICUTimeFormatStrings'={'1'='HH:mm ';'2'='HH:mm:ss ';'3'='HH:mm:ss  z';'4'='HH:mm:ss  zzzz';};}"
 
