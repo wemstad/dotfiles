@@ -12,6 +12,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "PLUGINS
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'LaTeX-Box-Team/LaTeX-Box'
+NeoBundle 'airblade/vim-gitgutter'
 
 "END PLUGINS
 
