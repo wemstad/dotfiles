@@ -2,8 +2,8 @@
   'showIndentGuide': true
   'fontFamily': 'Menlo'
   'fontSize': 15
+  'invisibles': {}
 'core':
-  'excludeVcsIgnoredPaths': true
   'ignoredNames': [
     '.bundle'
     '.git'
