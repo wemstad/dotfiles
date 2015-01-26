@@ -37,7 +37,8 @@ do
   source $file
 done
 
-
+#Define a java_home path
+export JAVA_HOME=`/usr/libexec/java_home`
 
 # AutoJump
 if [[ -n $commands[brew] ]] && [ $commands[brew] -a -f `brew --prefix`/etc/autojump ];
