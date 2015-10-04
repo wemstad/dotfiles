@@ -1,0 +1,68 @@
+#!/bin/bash
+
+argsall=( system tlmgr brew dotfiles gem backup cask)
+argsstandard=( brew dotfiles cask)
+if [[ $# -gt 0 ]] ; then
+	if [[ $@ == "all" ]] ; then
+		args=("${argsall[@]}")
+	else
+		args=$@
+	fi
+
+else
+	args=("${argsstandard[@]}")
+fi
+echo "=> Updating ( ${args[@]} )"
+for arg in ${args[@]}; do
+
+	#Update system
+	if [[ $arg == "system" ]] ; then
+		echo "=> Updating system"	
+		sudo softwareupdate -ia
+
+		#Updating tlmgr 
+	elif [[ $arg == tlmgr ]] ; then
+		echo "=> Updating tlmgr"
+		sudo tlmgr update --self
+		sudo tlmgr update --all
+
+		#Updating brew
+	elif [[ $arg == "brew" ]] ; then
+		echo "=> Updating & upgrading brew"
+		brew cleanup
+		brew update 
+		brew upgrade --all
+
+		#Updating brew cask
+	elif [[ $arg == "cask" ]] ; then 
+		echo "=> Updating brew cask"
+		brew cask cleanup
+		brew cask update
+
+		#Updateing gem
+	elif [[ $arg == "gem" ]] ; then
+		echo "=> Updating gem"
+		gem update
+		gem cleanup 
+
+		#Updating .dotfiles
+	elif [[ $arg == "dotfiles" ]] ; then
+		echo "=> Updating dotfiles"
+		pushd ~/.dotfiles > /dev/null
+		git stash -q
+		branch="$(git symbolic-ref HEAD 2> /dev/null)"
+		branch=${branch##refs/heads/}
+		git checkout master -q
+		git pull
+		git checkout $branch -q
+		git stash pop -q 2> /dev/null
+		popd > /dev/null
+
+	elif [[ $arg == "backup" ]] ; then 
+		echo "=> System backup"
+		/System/Library/CoreServices/backupd.bundle/Contents/Resources/backupd-helper &
+	else
+		echo "ARGS ERROR $arg is not defined"
+		echo "Allowed ARGS are: " ${argsall[@]}
+	fi
+done
