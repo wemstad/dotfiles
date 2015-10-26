@@ -53,6 +53,4 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 unset config_files
 
-[ -s "/Users/chwe/.dnx/dnvm/dnvm.sh" ] && . "/Users/chwe/.dnx/dnvm/dnvm.sh" # Load dnvm
-#Kvm
-source kvm.sh
+[ -s ~/.dnx/dnvm/dnvm.sh ] && source ~/.dnx/dnvm/dnvm.sh # Load dnvm
