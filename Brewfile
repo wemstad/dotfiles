@@ -22,6 +22,7 @@ brew 'unrar'
 brew 'vim'
 brew 'zsh'
 
+brew 'brew-cask'
 cask '1password'
 cask 'caffeine'
 cask 'flux'
