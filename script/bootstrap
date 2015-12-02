@@ -141,8 +141,6 @@ install_dotfiles () {
     mkdir -p  ~/.vim/bundle  
     git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
   fi
-
-  source ~/.zshrc
 }
 
 setup_gitconfig
@@ -162,10 +160,10 @@ fi
 
 user "Do you want to install wemstad custom os x defaults-settings? (y/N)"
 read -n 1 action
-if [ $action == "Y" || $action == "y" ]
+if [ "$action" == "Y" ] || [ "$action" == "y" ]
 then 
   info "changing settings"
-  if . osx/set-defaults > /tmp/defaults-settings 2>&1
+  if . $DOTFILES_ROOT/osx/set-defaults.sh > /tmp/defaults-settings 2>&1
   then
     success "changed defaults-settings"
   else 
