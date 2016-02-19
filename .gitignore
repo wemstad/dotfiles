@@ -8,4 +8,4 @@ atom.symlink/storage
 atom.symlink/themes
 atom.symlink/compile-cache/
 
-git/gitconfig.local
+git/gitconfig.local.symlink
