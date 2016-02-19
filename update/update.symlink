@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/local/bin/zsh
 
-argsall=( system tlmgr brew dotfiles gem backup cask)
-argsstandard=( brew dotfiles cask)
+argsall=( system tlmgr brew dotfiles gem backup cask dnvm)
+argsstandard=( brew dotfiles cask dnvm)
 if [[ $# -gt 0 ]] ; then
 	if [[ $@ == "all" ]] ; then
 		args=("${argsall[@]}")
@@ -58,6 +58,10 @@ for arg in ${args[@]}; do
 		git stash pop -q 2> /dev/null
 		popd > /dev/null
 
+	elif [[ $arg == "dnvm" ]] ; then
+		echo "=> Updating dnvm"
+		dnvm self-update
+		
 	elif [[ $arg == "backup" ]] ; then 
 		echo "=> System backup"
 		/System/Library/CoreServices/backupd.bundle/Contents/Resources/backupd-helper &
