@@ -29,9 +29,9 @@ for arg in ${args[@]}; do
 		#Updating brew
 	elif [[ $arg == "brew" ]] ; then
 		echo "=> Updating & upgrading brew"
-		brew cleanup
 		brew update 
 		brew upgrade --all
+		brew cleanup
 
 		#Updating brew cask
 	elif [[ $arg == "cask" ]] ; then 
