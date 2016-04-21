@@ -59,3 +59,4 @@ export NVM_DIR="/Users/chwe/.nvm"
 #Turning off shared history for iterm2
 unsetopt inc_append_history
 unsetopt share_history
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
