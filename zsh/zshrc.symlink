@@ -42,8 +42,7 @@ done
 export JAVA_HOME=`/usr/libexec/java_home`
 
 # AutoJump
-if [[ -n $commands[brew] ]] && [ $commands[brew] -a -f `brew --prefix`/etc/autojump ];
-
+if [[ -n $commands[brew] ]];
 then
 	[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh	
 fi
