@@ -1,7 +1,7 @@
 #!/usr/local/bin/zsh
 
 argsall=( system tlmgr brew dotfiles gem backup cask dnvm)
-argsstandard=( brew dotfiles cask dnvm)
+argsstandard=( brew dotfiles cask )
 if [[ $# -gt 0 ]] ; then
 	if [[ $@ == "all" ]] ; then
 		args=("${argsall[@]}")

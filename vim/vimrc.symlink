@@ -4,7 +4,7 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -15,34 +15,45 @@ NeoBundle 'LaTeX-Box-Team/LaTeX-Box'
 NeoBundle 'airblade/vim-gitgutter'
 
 "END PLUGINS
+call neobundle#end()
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+filetype plugin on
 
 NeoBundleCheck
 
 syntax on
 set ruler
 set number "Setting rownumbers
-set hlsearch "Setting highlighting on search 
+set hlsearch "Setting highlighting on search
 set autoindent "Allowing autoindent in methods
-set smartindent
+set smartindent "Auto indent next row.
+set noswapfile " Dont create swapfiles.
 set wildmenu "Show all in list menu
-"set title " Change the title bar to show the file that is edited
-"set list " Display unprintable characters (tabs, spaces etc.)
-"set hidden " Allow switching from unsaved buffers
+set title " Change the title bar to show the file that is edited
+set list " Display unprintable characters (tabs, spaces etc.)
+set listchars=tab:▸\ ,trail:~
 set visualbell t_vb= " Disable bells and flashes
 set splitbelow splitright " Push new splits to bottom/right
 set textwidth=80 " Set text width
 
 let mapleader = ","
 
+set ts=2 sts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype tex setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype cpp setlocal ts=4 sts=4 sw=4 expandtab
+autocmd Filetype sh setlocal tw=0
+autocmd Filetype php setlocal ts=4 sts=4 sw=4 noexpandtab
+
+
+"Remove trailing whitespaces
+autocmd BufWritePre * :%s/\s\+$//e
 
 set timeoutlen=1000 ttimeoutlen=50
 

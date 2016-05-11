@@ -39,12 +39,15 @@ do
 done
 
 #Define a java_home path
-export JAVA_HOME=`/usr/libexec/java_home`
+if [[ /usr/libexec/java_home == 0 ]];
+then
+  export JAVA_HOME=$(/usr/libexec/java_home);
+fi
 
 # AutoJump
 if [[ -n $commands[brew] ]];
 then
-	[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh	
+	[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 fi
 
 # Rbenv
