@@ -27,6 +27,7 @@ NeoBundleCheck
 syntax on
 set ruler
 set number "Setting rownumbers
+set relativenumber "Setting relative rownumbers
 set hlsearch "Setting highlighting on search
 set autoindent "Allowing autoindent in methods
 set smartindent "Auto indent next row.
