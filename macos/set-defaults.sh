@@ -1,9 +1,9 @@
-# Sets reasonable OS X defaults.
+# Sets reasonable macOS defaults.
 #
-# Or, in other words, set shit how I like in OS X.
+# Or, in other words, set shit how I like in macOS.
 #
 # The original idea (and a couple settings) were grabbed from:
-#   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+#   https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 #
 # Run ./set-defaults.sh and you'll be good to go.
 
@@ -145,7 +145,7 @@ defaults write com.apple.dock tilesize -int 36
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
-# Enable minimize applications to icon 
+# Enable minimize applications to icon
 defaults write com.apple.dock minimize-to-application -bool true
 
 # Forcing mail to show attachments as icons. (inverted)
@@ -179,7 +179,7 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 
-# Remove latancy for Dock to popup, also removes dubble dragdown to show 
+# Remove latancy for Dock to popup, also removes dubble dragdown to show
 # Dock in fullscreen
 defaults write com.apple.Dock autohide-delay -float 0
 defaults write com.apple.dock autohide-fullscreen-delayed false
@@ -212,15 +212,12 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 # Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 
-
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
-
 
 # Enable the debug menu in Disk Utility
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 defaults write com.apple.DiskUtility advanced-image-options -bool true
-
 
 # Allow installing user scripts via GitHub or Userscripts.org Google Chrome
 defaults write com.google.Chrome ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
