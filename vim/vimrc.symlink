@@ -24,7 +24,14 @@ filetype plugin on
 
 NeoBundleCheck
 
+highlight Comment ctermbg=DarkGray
+highlight Constant ctermbg=Blue
+highlight Normal ctermbg=Black
+highlight NonText ctermbg=Black
+highlight Special ctermbg=DarkMagenta
+highlight Cursor ctermbg=Green
 syntax on
+
 set ruler
 set number "Setting rownumbers
 set relativenumber "Setting relative rownumbers
@@ -55,6 +62,9 @@ autocmd Filetype php setlocal ts=4 sts=4 sw=4 noexpandtab
 
 "Remove trailing whitespaces
 autocmd BufWritePre * :%s/\s\+$//e
+
+highlight OverLength ctermbg=darkred
+match OverLength /\%81v/
 
 set timeoutlen=1000 ttimeoutlen=50
 
