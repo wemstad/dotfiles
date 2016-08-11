@@ -17,10 +17,10 @@ for arg in ${args[@]}; do
 
 	#Update system
 	if [[ $arg == "system" ]] ; then
-		echo "=> Updating system"	
+		echo "=> Updating system"
 		sudo softwareupdate -ia
 
-		#Updating tlmgr 
+		#Updating tlmgr
 	elif [[ $arg == tlmgr ]] ; then
 		echo "=> Updating tlmgr"
 		sudo tlmgr update --self
@@ -29,12 +29,12 @@ for arg in ${args[@]}; do
 		#Updating brew
 	elif [[ $arg == "brew" ]] ; then
 		echo "=> Updating & upgrading brew"
-		brew update 
+		brew update
 		brew upgrade --all
 		brew cleanup
 
 		#Updating brew cask
-	elif [[ $arg == "cask" ]] ; then 
+	elif [[ $arg == "cask" ]] ; then
 		echo "=> Updating brew cask"
 		brew cask cleanup
 		brew cask update
@@ -43,7 +43,7 @@ for arg in ${args[@]}; do
 	elif [[ $arg == "gem" ]] ; then
 		echo "=> Updating gem"
 		gem update
-		gem cleanup 
+		gem cleanup
 
 		#Updating .dotfiles
 	elif [[ $arg == "dotfiles" ]] ; then
@@ -61,8 +61,8 @@ for arg in ${args[@]}; do
 	elif [[ $arg == "dnvm" ]] ; then
 		echo "=> Updating dnvm"
 		dnvm self-update
-		
-	elif [[ $arg == "backup" ]] ; then 
+
+	elif [[ $arg == "backup" ]] ; then
 		echo "=> System backup"
 		/System/Library/CoreServices/backupd.bundle/Contents/Resources/backupd-helper &
 	else
