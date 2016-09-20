@@ -66,3 +66,5 @@ unsetopt share_history
 
 plugins+=(zsh-completions)
 autoload -U compinit && compinit
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
