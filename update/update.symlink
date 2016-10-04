@@ -30,7 +30,7 @@ for arg in ${args[@]}; do
 	elif [[ $arg == "brew" ]] ; then
 		echo "=> Updating & upgrading brew"
 		brew update
-		brew upgrade --all
+		brew upgrade
 		brew cleanup
 
 		#Updating brew cask
