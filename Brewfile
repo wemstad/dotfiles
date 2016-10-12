@@ -28,6 +28,7 @@ brew 'spark'
 brew 'unrar'
 brew 'wget'
 brew 'youtube-dl'
+brew 'zsh-autosuggestions'
 
 brew 'brew-cask'
 cask '1password'
