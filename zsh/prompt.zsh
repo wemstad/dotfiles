@@ -28,9 +28,8 @@ git_dirty() {
 }
 
 git_prompt_info () {
- ref=$($git symbolic-ref HEAD 2>/dev/null) || return
-# echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
- echo "${ref#refs/heads/}"
+  ref=$($git symbolic-ref HEAD 2>/dev/null) || ref=$(git rev-parse --short HEAD)
+  echo "${ref#refs/heads/}"
 }
 
 unpushed () {
