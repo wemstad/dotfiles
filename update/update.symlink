@@ -49,13 +49,11 @@ for arg in ${args[@]}; do
 	elif [[ $arg == "dotfiles" ]] ; then
 		echo "=> Updating dotfiles"
 		pushd ~/.dotfiles > /dev/null
-		git stash -q
 		branch="$(git symbolic-ref HEAD 2> /dev/null)"
 		branch=${branch##refs/heads/}
 		git checkout master -q
-		git pull
+		git pull --rebase --autostash
 		git checkout $branch -q
-		git stash pop -q 2> /dev/null
 		popd > /dev/null
 
 	elif [[ $arg == "dnvm" ]] ; then
