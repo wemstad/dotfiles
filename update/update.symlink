@@ -1,7 +1,7 @@
 #!/usr/local/bin/zsh
 
-argsall=( system tlmgr brew dotfiles gem backup cask dnvm)
-argsstandard=( brew dotfiles cask )
+argsall=( system tlmgr brew dotfiles gem backup dnvm)
+argsstandard=( brew dotfiles )
 if [[ $# -gt 0 ]] ; then
 	if [[ $@ == "all" ]] ; then
 		args=("${argsall[@]}")
@@ -26,18 +26,13 @@ for arg in ${args[@]}; do
 		sudo tlmgr update --self
 		sudo tlmgr update --all
 
-		#Updating brew
+		#Updating brew and brew cask
 	elif [[ $arg == "brew" ]] ; then
 		echo "=> Updating & upgrading brew"
 		brew update
 		brew upgrade
 		brew cleanup
-
-		#Updating brew cask
-	elif [[ $arg == "cask" ]] ; then
-		echo "=> Updating brew cask"
 		brew cask cleanup
-		brew cask update
 
 		#Updateing gem
 	elif [[ $arg == "gem" ]] ; then
