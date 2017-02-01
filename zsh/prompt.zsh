@@ -32,10 +32,9 @@ git_prompt_info () {
   echo "${ref#refs/heads/}"
 }
 
-unpushed () {
-  $git cherry -v @{upstream} 2>/dev/null
-}
-
+# This assumes that you always have an origin named `origin`, and that you only
+# care about one specific origin. If this is not the case, you might want to use
+# `$git cherry -v @{upstream}` instead.
 need_push () {
   if [[ $(unpushed) == "" ]]
   then
@@ -55,6 +54,10 @@ directory_name() {
 }
 
 export PROMPT=$'\n$(whoami) in $(directory_name)$(git_dirty)$(need_push)\n› '
+
+battery_status() {
+  $ZSH/bin/battery-status
+}
 
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
