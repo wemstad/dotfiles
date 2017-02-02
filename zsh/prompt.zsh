@@ -13,6 +13,10 @@ git_branch() {
   echo $($git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
 }
 
+unpushed () {
+  $git cherry -v @{upstream} 2>/dev/null
+}
+
 git_dirty() {
   if $(! $git status -s &> /dev/null)
   then
