@@ -1,2 +1,0 @@
-export HOME=/Users/christian
-export PATH="/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:$PATH"
