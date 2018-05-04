@@ -1,6 +1,5 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/dupes'
 
 brew 'ack'
 brew 'coreutils'
