@@ -225,3 +225,6 @@ defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://
 
 # Messages.app change cmd+backspace this should clean the row.
 defaults write com.apple.iChat NSUserKeyEquivalents '{"Close Conversation..."="~@W";}'
+
+# Turn of chime when connecting power adapter
+defaults write com.apple.PowerChime ChimeOnNoHardware -bool true
