@@ -32,7 +32,6 @@ brew 'zsh-autosuggestions'
 
 cask '1password'
 cask 'caffeine'
-cask 'flux'
 cask 'firefox'
 cask 'google-chrome'
 cask 'iterm2'
