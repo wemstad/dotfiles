@@ -228,3 +228,6 @@ defaults write com.apple.iChat NSUserKeyEquivalents '{"Close Conversation..."="~
 
 # Turn of chime when connecting power adapter
 defaults write com.apple.PowerChime ChimeOnNoHardware -bool true
+
+#Turn off the t.co redirect
+defaults write com.tapbots.TweetbotMac OpenURLsDirectly YES
