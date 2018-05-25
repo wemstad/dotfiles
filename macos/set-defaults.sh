@@ -229,5 +229,12 @@ defaults write com.apple.iChat NSUserKeyEquivalents '{"Close Conversation..."="~
 # Turn of chime when connecting power adapter
 defaults write com.apple.PowerChime ChimeOnNoHardware -bool true
 
-#Turn off the t.co redirect
+# Show week numbers in Calendar
+defaults write com.apple.ical "Show Week Numbers" 1
+
+# First day of the week should be Monday
+defaults write com.apple.ical "first day of week" 1
+
+# Turn off the t.co redirect
 defaults write com.tapbots.TweetbotMac OpenURLsDirectly YES
+
