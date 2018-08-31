@@ -37,7 +37,6 @@ for arg in ${args[@]}; do
 		brew update
 		brew upgrade
 		brew cleanup
-		brew cask cleanup
 
 		#Updateing gem
 	elif [[ $arg == "gem" ]] ; then
